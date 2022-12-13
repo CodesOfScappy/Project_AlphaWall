@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -34,8 +35,28 @@ public class MainActivity extends AppCompatActivity {
 
         // Methode call
         setUpWithViewPager(binding.viewPager);
+        // Implement tabLayout and ViewPager
         binding.tabLayout.setupWithViewPager(binding.viewPager);
+        // set Toolbar Custom Style
         setSupportActionBar(binding.toolbar);
+
+        // Viewpager Adapter for FabIconButtons
+        binding.viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                changeFabIcon(position);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
     // This Manage the FragmentsView´s and the Title of them in TabsLayout
@@ -112,4 +133,34 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+
+    // This Change the FabButton when switch the fragments
+    private void changeFabIcon(final int index){
+        binding.fabAction.hide();
+
+       new Handler().postDelayed(new Runnable() {
+           @Override
+           public void run() {
+
+               switch (index){
+                   case 0 : binding.fabAction.setImageDrawable(getDrawable(R.drawable.ic_chat));
+                   break;
+
+                   case 1 : binding.fabAction.setImageDrawable(getDrawable(R.drawable.ic_camera));
+                   break;
+
+                   case 2 : binding.fabAction.setImageDrawable(getDrawable(R.drawable.ic_call));
+                   break;
+               }
+               binding.fabAction.show();
+
+           }
+       },400);
+
+
+    }
+
+
+
 }

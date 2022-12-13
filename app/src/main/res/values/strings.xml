@@ -5,4 +5,8 @@
     <string name="chats_fragment">Chats Fragment</string>
     <string name="calls_fragment">Calls Fragment</string>
     <string name="status_fragment">Status Fragment</string>
+    <string name="Scappy_Messenger">Scappy Messanger</string>
+    <string name="search">search</string>
+    <string name="more">more</string>
+    <string name="fab_button">fab_Button</string>
 </resources>
