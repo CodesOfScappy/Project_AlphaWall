@@ -8,15 +8,25 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.bumptech.glide.Glide;
 import com.scappycoding.demomessanger.R;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 
 public class StatusFragment extends Fragment {
 
 
 
+
+
+
+
+
     public StatusFragment() {
         // Required empty public constructor
+
+
     }
 
 
@@ -26,5 +36,11 @@ public class StatusFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_status, container, false);
+
+
+
+
     }
+
+
 }

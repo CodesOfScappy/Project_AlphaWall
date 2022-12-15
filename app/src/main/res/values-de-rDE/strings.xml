@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="username">Benutzername</string>
+    <string name="description">Beschreibung</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="chats_fragment">Chats Fragment</string>
+    <string name="calls_fragment">Calls Fragment</string>
+    <string name="status_fragment">Status Fragment</string>
+    <string name="Scappy_Messenger">Scappy Messanger</string>
+    <string name="search">Suchen</string>
+    <string name="more">Mehr</string>
+    <string name="fab_button">fab_Button</string>
+    <string name="_13_12_2022">13/12/2022</string>
+    <string name="mystatus">Mein Status</string>
+    <string name="tab_to_add_status_update">Drücken um deinen Status zu ändern</string>
+    <string name="button_to_add">Button to Add</string>
+</resources>
